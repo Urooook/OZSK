@@ -1,6 +1,7 @@
 import Container from '@/components/ui/Container';
 import SectionHeading from '@/components/ui/SectionHeading';
 import DirectionCard from '@/components/ui/DirectionCard';
+import RevealOnScroll from '@/components/ui/RevealOnScroll';
 import { directions } from '@/lib/content';
 
 export default function Directions() {
@@ -8,6 +9,7 @@ export default function Directions() {
     <section className="bg-card py-16">
       <Container>
         <SectionHeading label="Направления деятельности" />
+        <RevealOnScroll direction="right">
         <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 sm:gap-6 mt-4 items-stretch">
           {directions.map((dir) => (
             <DirectionCard
@@ -17,6 +19,7 @@ export default function Directions() {
             />
           ))}
         </div>
+        </RevealOnScroll>
       </Container>
     </section>
   );

@@ -1,12 +1,13 @@
 import Container from '@/components/ui/Container';
 import SectionHeading from '@/components/ui/SectionHeading';
+import RevealOnScroll from '@/components/ui/RevealOnScroll';
 import { company } from '@/lib/content';
 
 export default function About() {
   return (
     <section className="bg-card py-16">
       <Container>
-        <div className="max-w-xl">
+        <RevealOnScroll direction="left" className="max-w-xl">
           <SectionHeading label="О компании" />
           <h2 className="text-2xl sm:text-3xl font-bold text-brand uppercase mb-6 leading-tight">
             {company.aboutTitle}
@@ -17,7 +18,7 @@ export default function About() {
           <p className="text-sm sm:text-base text-brand leading-relaxed">
             {company.description2}
           </p>
-        </div>
+        </RevealOnScroll>
       </Container>
     </section>
   );
