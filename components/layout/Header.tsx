@@ -4,6 +4,7 @@ import { Phone } from 'lucide-react';
 import Container from '@/components/ui/Container';
 import Button from '@/components/ui/Button';
 import { contacts } from '@/lib/content';
+import { assetPath } from '@/lib/asset';
 
 export default function Header() {
   return (
@@ -13,7 +14,7 @@ export default function Header() {
           {/* Logo */}
           <Link href="/" className="flex-shrink-0">
             <Image
-              src="/images/Logo.jpg"
+              src={assetPath("/images/Logo.jpg")}
               alt="ОЗСК-Строй"
               width={140}
               height={56}

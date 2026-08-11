@@ -1,4 +1,5 @@
 import Image from 'next/image';
+import { assetPath } from '@/lib/asset';
 
 interface ProjectCardProps {
   title: string;
@@ -11,7 +12,7 @@ export default function ProjectCard({ title, location, image }: ProjectCardProps
     <div className="flex flex-col gap-3">
       <div className="relative aspect-[3/2] w-full overflow-hidden rounded-lg">
         <Image
-          src={image}
+          src={assetPath(image)}
           alt={title}
           fill
           className="object-cover"

@@ -1,9 +1,9 @@
 import Image from 'next/image';
 import Link from 'next/link';
 import { Phone } from 'lucide-react';
-import Container from '@/components/ui/Container';
 import Button from '@/components/ui/Button';
 import { company, contacts } from '@/lib/content';
+import { assetPath } from '@/lib/asset';
 
 export default function Hero() {
   return (
@@ -11,7 +11,7 @@ export default function Hero() {
 
       {/* ── Background: hotel photo fills the entire section ── */}
       <Image
-        src="/images/h2o.png"
+        src={assetPath("/images/h2o.png")}
         alt="Гостиничный комплекс H2O"
         fill
         className="object-cover object-center"
@@ -36,49 +36,47 @@ export default function Hero() {
         {/* ── Top navigation row ──
              Logo is absolute (top-left), so the wrapper needs a min-height
              equal to the logo height to prevent overlap with hero content. ── */}
-        <div className="relative min-h-28 sm:min-h-36">
+        <div className="relative min-h-20 sm:min-h-28">
 
           {/* Logo: absolute, pinned to top-left corner of the section */}
           <Link href="/" aria-label="Перейти на главную" className="absolute left-0 top-0">
             <div
-              className="bg-white pl-3 sm:pl-4 lg:pl-20 pr-7 sm:pr-10 lg:pr-12 pt-0 pb-1 sm:pb-2 overflow-hidden"
+              className="bg-white pl-3 sm:pl-4 lg:pl-20 pr-6 sm:pr-10 lg:pr-12 pt-0 pb-1 sm:pb-2 overflow-hidden"
               style={{ clipPath: 'polygon(0 0, 100% 0, 78% 100%, 0 100%)' }}
             >
               <Image
-                src="/images/Logo.jpg"
+                src={assetPath("/images/Logo.jpg")}
                 alt="ОЗСК-Строй"
                 width={420}
                 height={168}
-                className="h-28 sm:h-36 w-auto object-contain scale-[1.5] origin-right"
+                className="h-20 w-28 sm:h-28 sm:w-40 object-contain scale-[1.2] sm:scale-[1.5] origin-right"
                 priority
               />
             </div>
           </Link>
 
-          {/* Phone + CTA: right-aligned */}
-          <Container>
-            <div className="flex justify-end pt-4 sm:pt-5">
-              <div className="flex flex-col items-end gap-2">
-                {/* Phone — hidden on mobile */}
-                <a
-                  href={`tel:${contacts.phoneTel}`}
-                  className="hidden sm:flex items-center gap-2 text-white/90 hover:text-white transition-colors"
-                >
-                  <Phone className="w-4 h-4 text-white/70" strokeWidth={1.5} aria-hidden="true" />
-                  <span className="text-sm font-semibold tracking-wide">{contacts.phone}</span>
-                </a>
-                {/* Semi-transparent CTA → phone call */}
-                <a
-                  href={`tel:${contacts.phoneTel}`}
-                  className="inline-flex items-center justify-center rounded px-5 py-2.5 text-sm font-semibold
-                             bg-accent/45 border border-accent/70 text-white
-                             backdrop-blur-sm hover:bg-accent/65 transition-colors cursor-pointer"
-                >
-                  Связаться с нами
-                </a>
-              </div>
+          {/* Phone + CTA: absolute, pinned to right edge */}
+          <div className="absolute right-2 sm:right-4 top-4 sm:top-5">
+            <div className="flex flex-col items-end gap-2">
+              {/* Phone — hidden on mobile */}
+              <a
+                href={`tel:${contacts.phoneTel}`}
+                className="hidden sm:flex items-center gap-2 text-white/90 hover:text-white transition-colors"
+              >
+                <Phone className="w-4 h-4 text-white/70" strokeWidth={1.5} aria-hidden="true" />
+                <span className="text-sm font-semibold tracking-wide">{contacts.phone}</span>
+              </a>
+              {/* Semi-transparent CTA → phone call */}
+              <a
+                href={`tel:${contacts.phoneTel}`}
+                className="inline-flex items-center justify-center rounded px-5 py-2.5 text-sm font-semibold
+                           bg-accent/45 border border-accent/70 text-white
+                           backdrop-blur-sm hover:bg-accent/65 transition-colors cursor-pointer"
+              >
+                Связаться с нами
+              </a>
             </div>
-          </Container>
+          </div>
         </div>
 
         {/* ── Main hero content — near left edge, max ~48% width on desktop ── */}
@@ -94,11 +92,11 @@ export default function Hero() {
               </p>
               <div className="flex flex-wrap gap-3 sm:gap-4">
                 {/* Solid green — matches mockup */}
-                <Button href="#contacts" variant="primary">
+                <Button href={`mailto:${contacts.email}`} variant="primary">
                   Обсудить проект
                 </Button>
                 {/* Dark-backed outline — matches mockup (dark navy fill + white border) */}
-                <Button href="#contacts" variant="outline" className="bg-navy/50">
+                <Button href={`mailto:${contacts.email}`} variant="outline" className="bg-navy/50">
                   Связаться с нами
                 </Button>
               </div>
