@@ -5,9 +5,9 @@ import { projects } from '@/lib/content';
 
 export default function Projects() {
   return (
-    <section className="bg-card py-16">
-      <Container>
-        <div className="flex items-center justify-between mb-6">
+    <section className="bg-card py-10 w-[86%] mx-auto">
+      {/* <Container> */}
+        <div className="flex items-center mb-6">
           <SectionHeading label="Проекты" className="mb-0" />
           {/* <a
             href="#"
@@ -27,7 +27,7 @@ export default function Projects() {
             />
           ))}
         </div>
-      </Container>
+      {/* </Container> */}
     </section>
   );
 }

@@ -7,10 +7,10 @@ type FeatureIcon = 'award' | 'clipboard-list' | 'calendar-check' | 'shield-check
 
 export default function Advantages() {
   return (
-    <section className="bg-surface py-12 sm:py-16">
-      <Container>
+    <section className="bg-white py-12 sm:py-16 w-[86%] mx-auto">
+      {/* <Container> */}
         <SectionHeading label="Наши преимущества" />
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div className="flex flex-col sm:flex-row divide-y sm:divide-y-0 sm:divide-x divide-brand/20">
           {advantages.map((adv) => (
             <FeatureItem
               key={adv.id}
@@ -20,7 +20,7 @@ export default function Advantages() {
             />
           ))}
         </div>
-      </Container>
+      {/* </Container> */}
     </section>
   );
 }

@@ -9,13 +9,13 @@ interface ProjectCardProps {
 export default function ProjectCard({ title, location, image }: ProjectCardProps) {
   return (
     <div className="flex flex-col gap-3">
-      <div className="relative aspect-[4/3] w-full overflow-hidden rounded-lg">
+      <div className="relative aspect-[3/2] w-full overflow-hidden rounded-lg">
         <Image
           src={image}
           alt={title}
           fill
           className="object-cover"
-          sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 20vw"
+          sizes="(max-width: 640px) 100vw, (max-width: 1024px) 0vw, 20vw"
         />
       </div>
       <div>
