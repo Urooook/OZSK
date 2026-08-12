@@ -46,20 +46,20 @@ export const projects = [
   },
   {
     id: 'three-elements',
-    title: 'Туристический комплекс «Три стихии»',
+    title: 'Туристический комплекс\n«Три стихии»',
     location: 'г. Нижний Новгород',
     image: '/images/threeElements.png',
   },
   {
     id: 'arctic-trefoil',
     title: 'База «Арктический трилистник»',
-    location: 'о. Земля Александры, архипелаг Земля Франца-Иосифа, Арктика',
+    location: 'о. Земля Александры,\nархипелаг Земля Франца-Иосифа, Арктика',
     image: '/images/Arctic.png',
   },
   {
     id: 'north-clover',
     title: 'База «Северный клевер»',
-    location: 'о. Котельный, архипелаг Новосибирских островов, Арктика',
+    location: 'о. Котельный,\nархипелаг Новосибирских островов, Арктика',
     image: '/images/NorthClever.png',
   },
   {

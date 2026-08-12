@@ -9,9 +9,6 @@ export default function About() {
       <Container>
         <RevealOnScroll direction="left" className="max-w-xl">
           <SectionHeading label="О компании" />
-          <h2 className="text-2xl sm:text-3xl font-bold text-brand uppercase mb-6 leading-tight">
-            {company.aboutTitle}
-          </h2>
           <p className="text-sm sm:text-base text-brand leading-relaxed mb-4">
             {company.description1}
           </p>

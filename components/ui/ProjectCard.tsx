@@ -18,8 +18,8 @@ export default function ProjectCard({ title, location, image }: ProjectCardProps
         />
       </div>
       <div>
-        <p className="text-sm font-semibold text-ink leading-snug">{title}</p>
-        <p className="text-xs text-muted mt-1">{location}</p>
+        <p className="text-sm font-semibold text-ink leading-snug whitespace-pre-line">{title}</p>
+        <p className="text-xs text-muted mt-1 whitespace-pre-line">{location}</p>
       </div>
     </div>
   );

@@ -1,34 +1,16 @@
-import Image from 'next/image';
 import { Phone, Mail, MapPin } from 'lucide-react';
 import Container from '@/components/ui/Container';
 import Button from '@/components/ui/Button';
-import { contacts, company } from '@/lib/content';
+import { contacts } from '@/lib/content';
+
 export default function Footer() {
   return (
     <footer id="contacts" className="bg-navy">
       {/* Main footer content */}
       <Container>
-        <div className="py-12 sm:py-16 grid grid-cols-1 sm:grid-cols-3 gap-8 lg:gap-12">
+        <div className="py-12 sm:py-16 grid grid-cols-1 sm:grid-cols-2 gap-8 lg:gap-12">
 
-          {/* Column 1: Logo + company name */}
-          <div className="flex flex-col items-center text-center gap-4">
-            <div className="relative w-36 h-24">
-              <Image
-                src="/images/Logo.jpg"
-                alt="ОЗСК-Строй"
-                fill
-                className="object-contain"
-              />
-            </div>
-            <p className="text-sm font-semibold text-white leading-snug">
-              {company.name}
-            </p>
-            <p className="text-xs text-white/60 leading-relaxed">
-              {company.tagline}
-            </p>
-          </div>
-
-          {/* Column 2: Contacts */}
+          {/* Column 1: Contacts */}
           <div className="flex flex-col gap-1">
             <p className="text-xs font-bold uppercase tracking-widest text-white/50 mb-3">Контакты</p>
             <a
