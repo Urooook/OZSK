@@ -1,12 +1,10 @@
 import Image from 'next/image';
-import { assetPath } from '@/lib/asset';
-
 /** Icon 4 — General contract: uses provided jpg image */
 function CraneIcon({ className }: { className?: string }) {
   return (
     <div className={className}>
       <Image
-        src={assetPath("/images/genpodr.jpg")}
+        src="/images/genpodr.jpg"
         alt="Генеральный подряд"
         width={80}
         height={80}
@@ -21,7 +19,7 @@ function SkyscrapersIcon({ className }: { className?: string }) {
   return (
     <div className={className}>
       <Image
-        src={assetPath("/images/Build.jpg")}
+        src="/images/Build.jpg"
         alt="Строительство промышленных объектов"
         width={80}
         height={80}
@@ -36,7 +34,7 @@ function PavilionIcon({ className }: { className?: string }) {
   return (
     <div className={className}>
       <Image
-        src={assetPath("/images/BuildSecond.jpg")}
+        src="/images/BuildSecond.jpg"
         alt="Строительство гражданских объектов"
         width={80}
         height={80}

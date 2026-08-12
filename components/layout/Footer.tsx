@@ -3,8 +3,6 @@ import { Phone, Mail, MapPin } from 'lucide-react';
 import Container from '@/components/ui/Container';
 import Button from '@/components/ui/Button';
 import { contacts, company } from '@/lib/content';
-import { assetPath } from '@/lib/asset';
-
 export default function Footer() {
   return (
     <footer id="contacts" className="bg-navy">
@@ -16,7 +14,7 @@ export default function Footer() {
           <div className="flex flex-col items-center text-center gap-4">
             <div className="relative w-36 h-24">
               <Image
-                src={assetPath("/images/Logo.jpg")}
+                src="/images/Logo.jpg"
                 alt="ОЗСК-Строй"
                 fill
                 className="object-contain"

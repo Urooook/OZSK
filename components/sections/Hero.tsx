@@ -3,15 +3,13 @@ import Link from 'next/link';
 import { Phone } from 'lucide-react';
 import Button from '@/components/ui/Button';
 import { company, contacts } from '@/lib/content';
-import { assetPath } from '@/lib/asset';
-
 export default function Hero() {
   return (
     <section className="relative min-h-screen overflow-hidden flex flex-col">
 
       {/* ── Background: hotel photo fills the entire section ── */}
       <Image
-        src={assetPath("/images/h2o.png")}
+        src="/images/h2o.png"
         alt="Гостиничный комплекс H2O"
         fill
         className="object-cover object-center"
@@ -45,7 +43,7 @@ export default function Hero() {
               style={{ clipPath: 'polygon(0 0, 100% 0, 78% 100%, 0 100%)' }}
             >
               <Image
-                src={assetPath("/images/Logo.jpg")}
+                src="/images/Logo.jpg"
                 alt="ОЗСК-Строй"
                 width={420}
                 height={168}
